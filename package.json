@@ -1,0 +1,28 @@
+{
+  "name": "collections-mcp",
+  "version": "1.0.0",
+  "description": "MCP server that lets Claude read and update my GT7 garage (Parc Ferm\u00e9) and sneaker collection (The Stockroom).",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node test/smoke.mjs"
+  },
+  "author": "Devin Proothi",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "type": "module",
+  "bin": {
+    "collections-mcp": "src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude"
+  ]
+}
