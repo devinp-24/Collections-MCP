@@ -29,7 +29,9 @@ answer along with the data behind it.
 | `stockroom_add_pair` | add to the wishlist or collection; a SKU pulls canonical details from KicksDB; duplicates are refused | ✓ |
 | `stockroom_mark_bought` | move a wishlist pair to the collection with the price paid | ✓ |
 
-Read tools work against the public, read-only deployments with no
+Read tools work against the public, read-only deployments
+([Parc Fermé](https://parc-ferme-production.up.railway.app),
+[The Stockroom](https://the-stockroom-production.up.railway.app)) with no
 credentials. Write tools need the owner token the apps were deployed with. A
 missing token gets a plain "this needs the owner token" back instead of a
 stack trace.
@@ -46,8 +48,8 @@ git clone https://github.com/devinp-24/collections-mcp && cd collections-mcp && 
 
 ```bash
 claude mcp add collections \
-  -e PARC_URL=https://<parc-ferme>.up.railway.app \
-  -e STOCKROOM_URL=https://<the-stockroom>.up.railway.app \
+  -e PARC_URL=https://parc-ferme-production.up.railway.app \
+  -e STOCKROOM_URL=https://the-stockroom-production.up.railway.app \
   -e OWNER_TOKEN=<owner token> \
   -- node /absolute/path/to/collections-mcp/src/index.js
 ```
@@ -61,8 +63,8 @@ claude mcp add collections \
       "command": "node",
       "args": ["/absolute/path/to/collections-mcp/src/index.js"],
       "env": {
-        "PARC_URL": "https://<parc-ferme>.up.railway.app",
-        "STOCKROOM_URL": "https://<the-stockroom>.up.railway.app",
+        "PARC_URL": "https://parc-ferme-production.up.railway.app",
+        "STOCKROOM_URL": "https://the-stockroom-production.up.railway.app",
         "OWNER_TOKEN": "<owner token>"
       }
     }
