@@ -5,6 +5,8 @@ An MCP server that lets Claude read and update two of my personal apps:
 tracker, and [The Stockroom](https://github.com/devinp-24/the-stockroom), my
 sneaker collection and wishlist.
 
+**[Watch the demo](https://youtu.be/OJXIuS2i6NE)**: Claude answering questions about both collections and adding a pair, live.
+
 The apps stay the source of truth. This server is a thin, typed layer: it turns
 a question in plain English into the right API calls, then returns a one-line
 answer along with the data behind it.
